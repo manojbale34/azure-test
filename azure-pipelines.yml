@@ -1,5 +1,5 @@
 jobs:
-- job: Win
+- job: AzureWinTest
   pool:
     name: WIN_VMSS_VENV_F8S_WU2
   variables:
