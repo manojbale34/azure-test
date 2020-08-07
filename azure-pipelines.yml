@@ -1,3 +1,4 @@
+jobs:
 - job: Win
   pool:
     name: WIN_VMSS_VENV_F8S_WU2
