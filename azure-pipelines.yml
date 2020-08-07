@@ -8,5 +8,6 @@
       powershell -command "Invoke-RestMethod -Headers @{\"Metadata\"=\"true\"} -Method GET -Uri http://169.254.169.254/metadata/instance/compute?api-version=2019-06-01 | format-custom"
       logman.exe create counter perf-log-01 -f bincirc -max 2048 -c "\Memory\*" "\Paging File(*)\*" "\PhysicalDisk(*)\*" "\Server\*" "\System\*" "\Processor(*)\*" "\Network Interface(*)\*" "\Process(cbengine)\*" -si 00:00:05 -o "C:\PerfLogs\perf-log-01"
       logman start perf-log-01
-      azcopy copy "C:\PerfLogs" "https://azureteststorage4open.blob.core.windows.net/azure-test?sp=acw&st=2020-08-07T08:56:46Z&se=2020-12-31T08:56:00Z&sv=2019-12-12&sr=c&sig=MQU6FQl0iw5Wc3pObyvV5fAqiAaHY8hs0ZzsTASrhg8%3D"
+      azcopy copy "C:\PerfLogs" "https://azureteststorage4open.blob.core.windows.net/azure-test/perflogs?sp=acw&st=2020-08-07T08:56:46Z&se=2020-12-31T08:56:00Z&sv=2019-12-12&sr=c&sig=MQU6FQl0iw5Wc3pObyvV5fAqiAaHY8hs0ZzsTASrhg8%3D"
+      azcopy copy "C:\agent\_diag" "https://azureteststorage4open.blob.core.windows.net/azure-test/agent?sp=acw&st=2020-08-07T08:56:46Z&se=2020-12-31T08:56:00Z&sv=2019-12-12&sr=c&sig=MQU6FQl0iw5Wc3pObyvV5fAqiAaHY8hs0ZzsTASrhg8%3D"
     displayName: 'Logs'
